@@ -7,15 +7,16 @@
 	<bean name="customerRepository"
 		class="com.sherbansoftware.repository.HibernateCustomerRepositoryImpl" />
 
+    <!-- bean with autowire by constructor -->
 	<bean name="customerService"
-		class="com.sherbansoftware.logic.CustomerServiceImpl">
+		class="com.sherbansoftware.logic.CustomerServiceImpl" autowire="constructor" >
 		<!-- setter injection 
 		    <property name="customerRepository" ref="customerRepository" />
 		 -->
 		 
-		<!--  constructor injection based on index -->
+		<!--  constructor injection based on index 
 		 <constructor-arg index="0" ref="customerRepository" />
-
+        -->
 	</bean>
 
 </beans>
