@@ -1,4 +1,4 @@
-package com.sherbansoftware.sample;
+package com.sherbansoftware.mainsample;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,8 +14,11 @@ public class SampleAppApplication {
 		// ICustomerService iCustomerService = new CustomerServiceImpl();
 
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
 		ICustomerService iCustomerService = applicationContext.getBean("customerService", ICustomerService.class);
 		String firstName = iCustomerService.findAll().get(0).getFirstName();
 		System.out.println("First name is: " + firstName);
+		
+		((ClassPathXmlApplicationContext) applicationContext).close();
 	}
 }
