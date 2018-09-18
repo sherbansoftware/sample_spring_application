@@ -1,16 +1,17 @@
 package com.sherbansoftware.model;
 
 public class Customer {
+	private int id;
 	private String firstName;
 	private String lastName;
 	private int age;
 
 	public Customer() {
-		
+
 	}
-	
-	public Customer(String firstName, String lastName, int age) {
-		super();
+
+	public Customer(int id, String firstName, String lastName, int age) {
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -38,6 +39,14 @@ public class Customer {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

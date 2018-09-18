@@ -20,10 +20,15 @@ public class CustomerServiceImpl implements ICustomerService {
 	}
 
 	@Override
-	public List<Customer> findAll() {
-		return iCustomerRepository.findAll();
+	public List<Customer> createCustomers() {
+		return iCustomerRepository.createCustomers();
 	}
 
+	@Override
+	public void updateCustomer(Customer original, Customer updated) {
+		iCustomerRepository.updateCustomer(original, updated);
+	}
+	
 	public void setCustomerRepository(ICustomerRepository customerRepository) {
 		this.iCustomerRepository = customerRepository;
 	}

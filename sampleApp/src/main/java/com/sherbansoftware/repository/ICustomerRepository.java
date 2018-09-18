@@ -6,6 +6,8 @@ import com.sherbansoftware.model.Customer;
 
 public interface ICustomerRepository {
 
-	List<Customer> findAll();
-
+	List<Customer> createCustomers();
+	
+	void updateCustomer(Customer original, Customer updated);
+	
 }
