@@ -20,7 +20,7 @@ public class SampleAppApplication {
 		System.out.println("List customer");
 		
 		for (Customer customer : iCustomerService.createCustomers()) {
-			int id = customer.getId();
+			Long id = customer.getId();
 			String firstName = customer.getFirstName();
 			String lastName = customer.getLastName();
 			int age = customer.getAge();
